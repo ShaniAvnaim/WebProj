@@ -28,6 +28,6 @@ namespace WebAppFinalProj.Models
         [Required]
         public string Role { get; set; }
 
-        public virtual ICollection<Course> Courses { get; set; }
+        public virtual List<Course> Courses { get; set; }
     }
 }

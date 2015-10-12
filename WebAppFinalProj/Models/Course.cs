@@ -18,15 +18,15 @@ namespace WebAppFinalProj.Models
         public string Address { get; set; }
         public string Description { get; set; }
 
-        [Column(TypeName = "Date"), Required]
+        [Required, DataType(DataType.Date)]
         public DateTime StartDate { get; set; }
 
-        [Column(TypeName = "Date")]
+        [DataType(DataType.Date)]
         public DateTime EndDate { get; set; }
 
         // FK - one to many relationship
         public int InstructorId { get; set; }
-        public virtual Instructor Instructor { get; set; }
+        //public virtual Instructor Instructor { get; set; }
 
         // FK - many to many relationship
         public virtual ICollection<User> Users { get; set; }

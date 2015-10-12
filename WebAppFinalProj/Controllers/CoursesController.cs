@@ -17,8 +17,7 @@ namespace WebAppFinalProj.Controllers
         // GET: Courses
         public ActionResult Index()
         {
-            var courses = db.Courses.Include(c => c.Instructor);
-            return View(courses.ToList());
+            return View(db.Courses.ToList());
         }
 
         // GET: Courses/Details/5
@@ -39,7 +38,6 @@ namespace WebAppFinalProj.Controllers
         // GET: Courses/Create
         public ActionResult Create()
         {
-            ViewBag.InstructorId = new SelectList(db.Instructors, "InstructorId", "FirstName");
             return View();
         }
 
@@ -57,7 +55,6 @@ namespace WebAppFinalProj.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.InstructorId = new SelectList(db.Instructors, "InstructorId", "FirstName", course.InstructorId);
             return View(course);
         }
 
@@ -73,7 +70,6 @@ namespace WebAppFinalProj.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.InstructorId = new SelectList(db.Instructors, "InstructorId", "FirstName", course.InstructorId);
             return View(course);
         }
 
@@ -90,7 +86,6 @@ namespace WebAppFinalProj.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.InstructorId = new SelectList(db.Instructors, "InstructorId", "FirstName", course.InstructorId);
             return View(course);
         }
 

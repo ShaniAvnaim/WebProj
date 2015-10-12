@@ -3,57 +3,33 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MakeItUp Beauty Academy - @ViewBag.Title</title>
+    <title>MakeItUp - Beauty Academy</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
 <body>
-    <header>
-        <h1>Logo</h1>
-        <h2>Beauty Academy</h2>
-    </header>
-    <div class="navbar navbar-inverse">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("MakeItUp", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About Us", "About", "Home")</li>
-                    <li>@Html.ActionLink("Courses", "Index", "Courses")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
-    </div>
+    <header> </header>
+    <nav>
+        <ul>
+            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+            <li>@Html.ActionLink("About Us", "About", "Home")</li>
+            <li>@Html.ActionLink("Our Courses", "Index", "Courses")</li>
+            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+        </ul>
+        @Html.Partial("_LoginPartial")
+    </nav>
     <section id="intro">
-       blahblahblahAwesomeblhablalhasd
-        we should do a background and some explaining or stuff
-        <section id="intro-message">
-            message of 10% off or something like that
-        </section>
+        <h2>Ever dreamed to be the best?</h2>
+        <p>MakeItUp - Beauty Academy presents new makeup and beauty classes.
+        Join us and recieve the best education in the makeup industry
+        with a promise for a successful career!</p>
     </section>
-    <div class="container body-content">
+    <div class="content">
         @RenderBody()
         <hr />
-        <aside>
-              <header>
-                  <h3>Upcoming Courses:</h3>
-              </header>
-              <ul>
-                  <li><a href="#">blah</a></li>
-              </ul>
-        </aside>
         <footer>
-            <p>&copy; @DateTime.Now.Year - Liel Cohen & Shani Avanaim</p>
+            <p>&copy; Liel Cohen & Shani Avnaim - @DateTime.Now.Year</p>
         </footer>
     </div>
 

@@ -12,16 +12,19 @@ namespace WebAppFinalProj.Models
         [Key]
         public int CourseId { get; set; }
 
-        [Required]
+        [Required, Display(Name = "Course Name")]
         public string Name { get; set; }
 
+        [Display(Name = "Address")]
         public string Address { get; set; }
+
+        [Display(Name = "Description")]
         public string Description { get; set; }
 
-        [Required, DataType(DataType.Date)]
+        [Required, DataType(DataType.Date), Display(Name = "Start Date")]
         public DateTime StartDate { get; set; }
 
-        [DataType(DataType.Date)]
+        [DataType(DataType.Date), Display(Name = "End Date")]
         public DateTime EndDate { get; set; }
 
         // FK - one to many relationship
@@ -29,6 +32,7 @@ namespace WebAppFinalProj.Models
         //public virtual Instructor Instructor { get; set; }
 
         // FK - many to many relationship
+        [Display(Name = "Attending Students")]
         public virtual ICollection<User> Users { get; set; }
     }
 }

@@ -12,22 +12,25 @@ namespace WebAppFinalProj.Models
         [Key]
         public int UserId { get; set; }
 
-        [Required]
+        [Required, Display(Name = "First Name")]
         public string FirstName { get; set; }
 
-        [Required]
+        [Required, Display(Name = "Last Name")]
         public string LastName { get; set; }
 
-        [Required]
+        [Required, Display(Name = "Email Address")]
         public string EmailAddress { get; set; }
+
+        [Display(Name = "Phone Number")]
         public string PhoneNum { get; set; }
 
-        [Required]
+        [Required, Display(Name = "Password")]
         public string Password { get; set; }
 
-        [Required]
+        [Required, Display(Name = "Role")]
         public string Role { get; set; }
 
+        [Display(Name = "Courses")]
         public virtual List<Course> Courses { get; set; }
     }
 }

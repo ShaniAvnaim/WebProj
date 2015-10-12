@@ -12,18 +12,19 @@ namespace WebAppFinalProj.Models
         [Key]
         public int InstructorId { get; set; }
 
-        [Required]
+        [Required, Display(Name = "First Name")]
         public string FirstName { get; set; }
 
-        [Required]
+        [Required, Display(Name = "Last Name")]
         public string LastName { get; set; }
 
-        [Required]
+        [Required, Display(Name = "Email Address")]
         public string EmailAddress { get; set; }
 
-        [Required]
+        [Required, Display(Name = "Phome Number")]
         public string PhoneNum { get; set; }
 
+        [Display(Name = "Courses")]
         public List<Course> Courses { get; set; }
     }
 } 

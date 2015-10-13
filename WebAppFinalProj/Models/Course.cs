@@ -17,6 +17,8 @@ namespace WebAppFinalProj.Models
 
         [Display(Name = "Address")]
         public string Address { get; set; }
+        public double X { get; set; }
+        public double Y { get; set; }
 
         [Display(Name = "Description")]
         public string Description { get; set; }

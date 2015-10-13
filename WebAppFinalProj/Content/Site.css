@@ -19,15 +19,18 @@ header, footer, section, aside, nav, article {
    src: url(Fonts/Avocado.ttf);
 }
 
+/*------------------------------
+=MAIN
+------------------------------*/
 body {
 	margin: 0 auto;
 	padding: 0;
-	width: 100%;
+	width: 1300px;
 	font: 13px/22px Helvetica, Arial, sans-serif;
 	background: #d9d7d7;
 }
 
-    body header {
+    #logo {
         background: url("Images/SiteLogo.png") center, url("Images/bg.png");
         background-repeat: no-repeat, repeat;
         padding: 22px 0;
@@ -205,3 +208,24 @@ footer {
     color: #bcb1c3;
     text-align: center;
 }
+
+/*------------------------------
+=CONTENT AREA AND SIDEBAR LAYOUT
+------------------------------*/
+
+#content {
+	display: table;
+    width: inherit;
+}
+
+	#main-content {
+		display: table-cell;
+		width: 80%;
+		padding-right: 22px;
+	}
+	
+	aside {
+		display: table-cell;
+        right: 0;
+		background: #5d436d;
+	}

@@ -7,16 +7,22 @@
 <h2>Our Courses</h2>
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>
 <script type="text/javascript">
     function toggleLink(divId) {
         $("#" + divId).toggle();
     }
 </script>
 
-    @foreach (var item in Model) {
-
+@foreach (var item in Model)
+{
+    <div>
+        <a href="javascript:toggleLink('@item.CourseId');">Extend All</a>
+        <a href="javascript:toggleLink('@item.CourseId');">Collapse All</a>
+    </div>
+    
     <a href="javascript:toggleLink('@item.CourseId');">@Html.DisplayFor(model => item.Name)</a>
-        <br />
+    <br />
     <div id="@item.CourseId">
         @Html.DisplayNameFor(model => model.StartDate) : @Html.DisplayFor(model => item.StartDate)
         <br />
@@ -27,4 +33,44 @@
         @Html.DisplayFor(model => item.Address)
         <br />
     </div>
-    }
+
+}
+
+<br />
+
+<div id="map_canvas" style="width:750px;height:350px"></div>
+
+    <section class="scripts">
+        <script type="text/javascript">
+            $(document).ready(function () {
+            Initialize();
+            });
+
+            function Initialize() {
+                google.maps.visualRefresh = true;
+
+                var MainOffice = new google.maps.LatLng(32.166870, 34.811686);
+                var mapOptions = {
+                    zoom: 9,
+                    center: MainOffice,
+                    mapTypeId: google.maps.MapTypeId.G_NORMAL_MAP
+                };
+
+                var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+
+                @foreach (var item in Model) {
+                    <text>
+
+                    var latLng = new google.maps.LatLng("@item.X", "@item.Y");
+
+                    var marker = new google.maps.Marker({
+                        position: latLng,
+                        map: map,
+                        draggable: false
+                    });
+                    marker.setMap(map);
+                    </text>
+                }
+            }
+        </script>
+    </section>

@@ -188,6 +188,10 @@
     <Compile Include="Migrations\201510121834375_Initial3.Designer.cs">
       <DependentUpon>201510121834375_Initial3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201510132018108_Initial4.cs" />
+    <Compile Include="Migrations\201510132018108_Initial4.Designer.cs">
+      <DependentUpon>201510132018108_Initial4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AcademyDbContext.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -294,6 +298,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201510121834375_Initial3.resx">
       <DependentUpon>201510121834375_Initial3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510132018108_Initial4.resx">
+      <DependentUpon>201510132018108_Initial4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

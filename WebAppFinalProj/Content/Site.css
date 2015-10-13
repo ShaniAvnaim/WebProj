@@ -24,7 +24,7 @@ body {
 	padding: 0;
 	width: 100%;
 	font: 13px/22px Helvetica, Arial, sans-serif;
-	background: #F0F0F0;
+	background: #d9d7d7;
 }
 
     body header {
@@ -99,7 +99,7 @@ nav {
 			float: right;
 
     }
-        nav ul li a {
+        #nav-right ul li a {
 				display: block;
 				margin-right: 20px;
 				width: 100px;
@@ -110,20 +110,36 @@ nav {
 				color: #bcb1c3;
                 text-shadow: 1px 1px #2c1a37;
 			}
-            nav ul li a:hover {
+            #nav-right ul li a:hover {
 					color: #F0F0F0;
                     text-decoration: none;
 				}
+
 /*------------------------------
 =INTRO
 ------------------------------*/
-#intro {
-	position: relative;
-	margin-top: 45px;
-	padding: 44px;
-	background: #5d436d url("Images/intro.png");
-    background-repeat: no-repeat;
+.intro-container {
+        position: relative;
+        margin: 45px auto auto;
+        width: 850px;
+        height: 300px;
+        background: #808080;
+        background: url(Images/intro.png);
+        background-repeat: no-repeat;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
 }
+
+#intro{
+    padding: 45px;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
 
 	#intro h2, #intro p {
 		position: relative;
@@ -141,20 +157,44 @@ nav {
 		padding: 0;
 		color: #d9f499;
 	}
-	
-	#intro img {
-		position: absolute;
-		top: 0;
-		right: 0;
-		width: 653px;
-		height: 100%;
-	}
 
+#popup {
+    position: absolute;
+    padding: 15px;
+    right: 0;
+    top: 0;
+    width: 25px;
+    height: 100%;
+    background: -moz-linear-gradient(red, blue); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#bcb1c3, #F0F0F0); /* Standard syntax */
+    border-top-right-radius:20px;
+    border-bottom-right-radius:20px;
+    transition: width 2s;
+    box-shadow: -3px 0px 5px #5d436d;
+    overflow:hidden
+}
+
+#popup-arrow {
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+    margin-left: 3px;
+}
+
+#popup:hover {
+
+    width: 30%;
+}
+
+#popup-coupon {
+    position: absolute;
+    margin: 15px;
+}
 /*------------------------------
 =FOOTER
 ------------------------------*/
 footer {
-	position: absolute;
+	position: static;
     padding: 0;
 	bottom: 0;
 	width: 100%;

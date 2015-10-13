@@ -19,11 +19,19 @@
         </ul>
         @Html.Partial("_LoginPartial")
     </nav>
-    <section id="intro">
-        <h2>Ever dreamed to be the best?</h2>
-        <p>MakeItUp - Beauty Academy presents new makeup and beauty classes.
-        Join us and recieve the best education in the makeup industry
-        with a promise for a successful career!</p>
+    <section class="intro-container">
+        <div id="intro">
+            <h2>Ever dreamed to be the best?</h2>
+            <p>
+                MakeItUp - Beauty Academy presents new makeup and beauty classes.
+                Join us and recieve the best education in the makeup industry
+                with a promise for a successful career!
+            </p>
+        </div>
+        <div id="popup">
+            <img src="~/Content/Images/popup_arrow.png" alt="Arrow" id="popup-arrow" />
+            <img src="~/Content/Images/coupon.png" alt="coupon" id="popup-coupon" />
+        </div>
     </section>
     <div class="content">
         @RenderBody()

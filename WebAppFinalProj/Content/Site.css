@@ -258,3 +258,7 @@ footer {
     box-shadow: 1px 1px #2c1a37;
 }
 
+.home-page p{
+    column-width:20em;
+    column-gap: 5px;
+}

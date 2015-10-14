@@ -204,6 +204,10 @@
     <Compile Include="Migrations\201510141621204_initialize.Designer.cs">
       <DependentUpon>201510141621204_initialize.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201510141816331_Initial7.cs" />
+    <Compile Include="Migrations\201510141816331_Initial7.Designer.cs">
+      <DependentUpon>201510141816331_Initial7.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AcademyDbContext.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -215,6 +219,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\AcademyDbContext.mdf" />
+    <Content Include="App_Data\AcademyDbContext_log.ldf">
+      <DependentUpon>AcademyDbContext.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\bg.png" />
@@ -325,9 +333,7 @@
     <Content Include="Views\Users\Edit.cshtml" />
     <Content Include="Views\Users\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -362,6 +368,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201510141621204_initialize.resx">
       <DependentUpon>201510141621204_initialize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510141816331_Initial7.resx">
+      <DependentUpon>201510141816331_Initial7.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

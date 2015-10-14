@@ -10,35 +10,67 @@
 <script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>
 
 <script type="text/javascript">
-    function toggleLink(divId) {
-        $("#" + divId).toggle();
+
+    $(document).ready(function () {
+        $('.section').hide();
+        $('h2').click(function () {
+            $(this).toggleClass("open");
+            $(this).next().toggle();
+        }); //end toggle
+
+        $('#expandall').click(function () {
+            $('.section').show();
+            $('h2').addClass("open");
+        });
+
+        $('#collapseall').click(function () {
+            $('.section').hide();
+            $('h2').removeClass("open");
+        });
+
+    });
+
+    function toggleDiv(id1) {
+        var tag = document.getElementById(id1).style;
+
+        if (tag.display == "none") {
+            tag.display = "block";
+        } else {
+            tag.display = "none";
+        }
     }
+
 </script>
 
-@foreach (var item in Model)
-{
-    <a href="javascript:toggleLink('@item.CourseId');">@Html.DisplayFor(model => item.Name)</a>
+    <button id="expandall">Expand All</button>
+    <button id="collapseall">Collapse All</button>
+
+    @foreach (var item in Model)
+    {
+        <div class="title" onclick="javascript:toggleDiv('@item.CourseId');">
+            <h2>@Html.DisplayFor(model => item.Name)</h2>
+        </div>
+        <br />
+        <div id="@item.CourseId" class="section">
+            @Html.DisplayNameFor(model => model.StartDate) : @Html.DisplayFor(model => item.StartDate)
+            <br />
+            @Html.DisplayNameFor(model => model.EndDate) : @Html.DisplayFor(model => item.EndDate)
+            <br />
+            @Html.DisplayNameFor(model => model.Description) : @Html.DisplayFor(model => item.Description)
+            <br />
+            @Html.DisplayFor(model => item.Address)
+            <br />
+        </div>
+    }
+
     <br />
-    <div id="@item.CourseId">
-        @Html.DisplayNameFor(model => model.StartDate) : @Html.DisplayFor(model => item.StartDate)
-        <br />
-        @Html.DisplayNameFor(model => model.EndDate) : @Html.DisplayFor(model => item.EndDate)
-        <br />
-        @Html.DisplayNameFor(model => model.Description) : @Html.DisplayFor(model => item.Description)
-        <br />
-        @Html.DisplayFor(model => item.Address)
-        <br />
-    </div>
-}
 
-<br />
-
-<div id="map_canvas" style="width:750px;height:350px"></div>
+    <div id="map_canvas" style="width:750px;height:350px"></div>
 
     <section class="scripts">
         <script type="text/javascript">
             $(document).ready(function () {
-            Initialize();
+                Initialize();
             });
 
             function Initialize() {
@@ -56,15 +88,15 @@
                 @foreach (var item in Model) {
                     <text>
 
-                    var latLng = new google.maps.LatLng("@item.X", "@item.Y");
+                var latLng = new google.maps.LatLng("@item.X", "@item.Y");
 
-                    var marker = new google.maps.Marker({
-                        position: latLng,
-                        map: map,
-                        draggable: false
-                    });
-                    marker.setMap(map);
-                    </text>
+                var marker = new google.maps.Marker({
+                    position: latLng,
+                    map: map,
+                    draggable: false
+                });
+                marker.setMap(map);
+                </text>
                 }
             }
         </script>

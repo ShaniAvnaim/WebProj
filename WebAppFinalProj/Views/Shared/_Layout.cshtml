@@ -22,18 +22,20 @@
         @Html.Partial("_LoginPartial")
     </nav>
     <section class="intro-container">
-        <div id="intro">
-            <h2>Ever dreamed to be the best?</h2>
-            <p>
-                MakeItUp - Beauty Academy presents new makeup and beauty classes.
-                Join us and recieve the best education in the makeup industry
-                with a promise for a successful career!
-            </p>
-        </div>
-        <div id="popup">
-            <img src="~/Content/Images/popup_arrow.png" alt="Arrow" id="popup-arrow" />
-            <img src="~/Content/Images/coupon.png" alt="coupon" id="popup-coupon" />
-        </div>
+        <section id="intro-content">
+            <div id="intro">
+                <h2>Ever dreamed to be the best?</h2>
+                <p>
+                    MakeItUp - Beauty Academy presents new makeup and beauty classes.
+                    Join us and recieve the best education in the makeup industry
+                    with a promise for a successful career!
+                </p>
+            </div>
+            <div id="popup">
+                <img src="~/Content/Images/popup_arrow.png" alt="Arrow" id="popup-arrow" />
+                <img src="~/Content/Images/coupon.png" alt="coupon" id="popup-coupon" />
+            </div>
+        </section>
     </section>
     <div id="content">
         <div id="main-content">
@@ -41,7 +43,7 @@
             <hr />      
         </div> 
         <aside>
-            <section>
+            <div>
                 <header>
                     <h3>Upcoming Courses:</h3>
                 </header>
@@ -50,7 +52,7 @@
                     <li><a href="#">Sit amet consectetur</a></li>
                     <li><a href="#">Adipisicing elit sed</a></li>
                 </ul>
-            </section>
+            </div>
         </aside>
     </div>
     <footer>
@@ -58,6 +60,7 @@
     </footer>
 
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>

@@ -227,7 +227,10 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\bg.png" />
     <Content Include="Content\Images\coupon.png" />
+    <Content Include="Content\Images\glambot_link.jpg" />
     <Content Include="Content\Images\intro.png" />
+    <Content Include="Content\Images\ladymakeup_link.png" />
+    <Content Include="Content\Images\nyx_link.png" />
     <Content Include="Content\Images\popup_arrow.png" />
     <Content Include="Content\Images\SiteLogo.png" />
     <Content Include="Content\themes\base\accordion.css" />

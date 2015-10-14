@@ -11,7 +11,7 @@ namespace WebAppFinalProj.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             ContextKey = "WebAppFinalProj.Models.AcademyDbContext";
         }
 

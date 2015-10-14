@@ -43,7 +43,7 @@
     }
 
     $(function () {
-        var date = $('#StartDate').datepicker({ dateFormat: 'dd-MM-yyyy' }).val();
+        var date = $('#StartDate').datepicker({ dateFormat: 'dd/mm/yy' }).val();
         return date;
     })
 </script>
@@ -55,7 +55,7 @@
             <br />
             Find by start date: @Html.TextBox("StartDate", "", new { @class = "datepicker", @id = "StartDate" })
             <br />
-            Find by instructor: @Html.TextBox("InstructorName")
+            Find by Address: @Html.TextBox("Address")
             <br />
             <input type="submit" value="Search" />
             <br />

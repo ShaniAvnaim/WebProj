@@ -13,19 +13,19 @@
 
     $(document).ready(function () {
         $('.section').hide();
-        $('h2').click(function () {
+        $('h3').click(function () {
             $(this).toggleClass("open");
             $(this).next().toggle();
         }); //end toggle
 
         $('#expandall').click(function () {
             $('.section').show();
-            $('h2').addClass("open");
+            $('h3').addClass("open");
         });
 
         $('#collapseall').click(function () {
             $('.section').hide();
-            $('h2').removeClass("open");
+            $('h3').removeClass("open");
         });
 
     });
@@ -48,9 +48,8 @@
     @foreach (var item in Model)
     {
         <div class="title" onclick="javascript:toggleDiv('@item.CourseId');">
-            <h2>@Html.DisplayFor(model => item.Name)</h2>
+            <h3>@Html.DisplayFor(model => item.Name)</h3>
         </div>
-        <br />
         <div id="@item.CourseId" class="section">
             @Html.DisplayNameFor(model => model.StartDate) : @Html.DisplayFor(model => item.StartDate)
             <br />

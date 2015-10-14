@@ -25,7 +25,7 @@ header, footer, section, aside, nav, article {
 body {
 	margin: 0 auto;
 	padding: 0;
-	width: 1300px;
+	width: 1000px;
 	font: 13px/22px Helvetica, Arial, sans-serif;
 	background: #fff;
 }
@@ -47,6 +47,7 @@ h3 {
 	font-size: 18px;
 	line-height: 22px;
 	padding: 11px 0;
+    text-decoration:underline;
 }
 
 p {
@@ -150,6 +151,7 @@ nav {
 		position: relative;
 		z-index: 9999;
 		width: 436px;
+        text-shadow: 1px 1px #2c1a37;
 	}
 	
 	#intro h2 {
@@ -224,7 +226,7 @@ footer {
 
 	#main-content {
 		display: table-cell;
-		width: 83%;
+		width: 78%;
 		padding-right: 22px;
         padding-left: 22px;
         background: #bcb1c3;
@@ -238,7 +240,7 @@ footer {
 	aside {
 		display: table-cell;
         right: 0;
-        padding: 5px;
+        padding: 10px;
         background: #bcb1c3;
         border:solid;
         border-color:#808080;
@@ -246,3 +248,13 @@ footer {
         -webkit-border-radius: 20px;
         -moz-border-radius: 20px;
 	}
+        aside ul {
+            list-style-type: none;
+        }
+
+.aff-links {
+    margin: 5px;
+    background: #9780a5;
+    box-shadow: 1px 1px #2c1a37;
+}
+

@@ -15,7 +15,7 @@ namespace WebAppFinalProj.Controllers
         private AcademyDbContext db = new AcademyDbContext();
 
         // GET: Courses
-        public ActionResult Index(string Name, string StartDate, string InstructorName)
+        public ActionResult Index(string Name, DateTime? StartDate, string InstructorName)
         {
             var courses = from s in db.Courses select s;
 
@@ -23,10 +23,9 @@ namespace WebAppFinalProj.Controllers
             {
                 courses = courses.Where(s => s.Name.Contains(Name));
             }
-            if (!String.IsNullOrEmpty(StartDate))
+            if (StartDate.HasValue)
             {
-                //DateTime date = DateTime
-                //courses = courses.Where(s => s.StartDate.;
+                courses = courses.Where(s => s.StartDate == StartDate);
             }
             if (!String.IsNullOrEmpty(InstructorName))
             {

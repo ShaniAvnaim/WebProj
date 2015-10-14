@@ -48,7 +48,7 @@
     @foreach (var item in Model)
     {
         <div class="title" onclick="javascript:toggleDiv('@item.CourseId');">
-            <h3>@Html.DisplayFor(model => item.Name)</h3>
+            <h3><a>@Html.DisplayFor(model => item.Name)</a></h3>
         </div>
         <div id="@item.CourseId" class="section">
             @Html.DisplayNameFor(model => model.StartDate) : @Html.DisplayFor(model => item.StartDate)

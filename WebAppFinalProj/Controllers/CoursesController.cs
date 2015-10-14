@@ -15,9 +15,25 @@ namespace WebAppFinalProj.Controllers
         private AcademyDbContext db = new AcademyDbContext();
 
         // GET: Courses
-        public ActionResult Index()
+        public ActionResult Index(string Name, string StartDate, string InstructorName)
         {
-            return View(db.Courses.ToList());
+            var courses = from s in db.Courses select s;
+
+            if (!String.IsNullOrEmpty(Name))
+            {
+                courses = courses.Where(s => s.Name.Contains(Name));
+            }
+            if (!String.IsNullOrEmpty(StartDate))
+            {
+                //DateTime date = DateTime
+                //courses = courses.Where(s => s.StartDate.;
+            }
+            if (!String.IsNullOrEmpty(InstructorName))
+            {
+                //courses = courses.Where(s => s.InstructorName.Contains(InstructorName));
+            }
+
+            return View(courses);
         }
 
         // GET: Courses/Details/5

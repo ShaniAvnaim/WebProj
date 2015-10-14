@@ -200,6 +200,10 @@
     <Compile Include="Migrations\201510140716464_Initial6.Designer.cs">
       <DependentUpon>201510140716464_Initial6.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201510141621204_initialize.cs" />
+    <Compile Include="Migrations\201510141621204_initialize.Designer.cs">
+      <DependentUpon>201510141621204_initialize.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AcademyDbContext.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -317,6 +321,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201510140716464_Initial6.resx">
       <DependentUpon>201510140716464_Initial6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510141621204_initialize.resx">
+      <DependentUpon>201510141621204_initialize.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

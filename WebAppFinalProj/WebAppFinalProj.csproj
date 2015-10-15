@@ -223,6 +223,10 @@
     <Content Include="App_Data\AcademyDbContext_log.ldf">
       <DependentUpon>AcademyDbContext.mdf</DependentUpon>
     </Content>
+    <Content Include="App_Data\aspnet-WebAppFinalProj-20151011112816.mdf" />
+    <Content Include="App_Data\aspnet-WebAppFinalProj-20151011112816_log.ldf">
+      <DependentUpon>aspnet-WebAppFinalProj-20151011112816.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\bg.png" />

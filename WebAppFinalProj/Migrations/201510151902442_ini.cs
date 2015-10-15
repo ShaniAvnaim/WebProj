@@ -3,7 +3,7 @@ namespace WebAppFinalProj.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class inital : DbMigration
+    public partial class ini : DbMigration
     {
         public override void Up()
         {
@@ -20,6 +20,7 @@ namespace WebAppFinalProj.Migrations
                         LastName = c.String(nullable: false),
                         EmailAddress = c.String(nullable: false),
                         PhoneNum = c.String(),
+                        CourseId = c.String(),
                         Course_CourseId = c.Int(),
                     })
                 .PrimaryKey(t => t.StudentId)

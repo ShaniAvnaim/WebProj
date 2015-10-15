@@ -208,6 +208,10 @@
     <Compile Include="Migrations\201510141816331_Initial7.Designer.cs">
       <DependentUpon>201510141816331_Initial7.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201510151902442_ini.cs" />
+    <Compile Include="Migrations\201510151902442_ini.Designer.cs">
+      <DependentUpon>201510151902442_ini.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AcademyDbContext.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -219,10 +223,6 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\AcademyDbContext.mdf" />
-    <Content Include="App_Data\AcademyDbContext_log.ldf">
-      <DependentUpon>AcademyDbContext.mdf</DependentUpon>
-    </Content>
     <Content Include="App_Data\aspnet-WebAppFinalProj-20151011112816.mdf" />
     <Content Include="App_Data\aspnet-WebAppFinalProj-20151011112816_log.ldf">
       <DependentUpon>aspnet-WebAppFinalProj-20151011112816.mdf</DependentUpon>
@@ -376,6 +376,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201510141816331_Initial7.resx">
       <DependentUpon>201510141816331_Initial7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510151902442_ini.resx">
+      <DependentUpon>201510151902442_ini.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -15,24 +15,9 @@ namespace WebAppFinalProj.Controllers
         private AcademyDbContext db = new AcademyDbContext();
 
         // GET: Instructors
-        public ActionResult Index(string FirstName, string LastName, int? InstructorId)
+        public ActionResult Index()
         {
-            var instructors = from i in db.Instructors select i;
-
-            if (!String.IsNullOrEmpty(FirstName))
-            {
-                instructors = instructors.Where(c => c.FirstName.Contains(FirstName));
-            }
-            if (!String.IsNullOrEmpty(LastName))
-            {
-                instructors = instructors.Where(c => c.LastName.Contains(LastName));
-            }
-            if (InstructorId.HasValue)
-            {
-                instructors = instructors.Where(c => c.InstructorId == InstructorId);
-            }
-
-            return View(instructors);
+            return View(db.Instructors.ToList());
         }
 
         // GET: Instructors/Details/5

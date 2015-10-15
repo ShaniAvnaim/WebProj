@@ -23,5 +23,8 @@ namespace WebAppFinalProj.Models
 
         [Display(Name = "Phone Number")]
         public string PhoneNum { get; set; }
+
+        [Display(Name= "Course ID")]
+        public string CourseId { get; set; }
     }
 }

@@ -2,20 +2,6 @@
 
 namespace WebAppFinalProj.Models
 {
-    public class ExternalLoginConfirmationViewModel
-    {
-        [Required]
-        [EmailAddress]
-        [Display(Name = "Email")]
-        public string Email { get; set; }
-    }
-
-    public class ExternalLoginListViewModel
-    {
-        public string Action { get; set; }
-        public string ReturnUrl { get; set; }
-    }
-
     public class ManageUserViewModel
     {
         [Required]
@@ -38,9 +24,8 @@ namespace WebAppFinalProj.Models
     public class LoginViewModel
     {
         [Required]
-        [EmailAddress]
-        [Display(Name = "Email")]
-        public string Email { get; set; }
+        [Display(Name = "Username")]
+        public string Username { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
@@ -53,6 +38,10 @@ namespace WebAppFinalProj.Models
 
     public class RegisterViewModel
     {
+        [Required]
+        [Display(Name = "Username")]
+        public string Username { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]

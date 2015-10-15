@@ -79,12 +79,23 @@
             <br />
             @Html.DisplayFor(model => item.Address)
             <br />
+            @if (User.Identity.Name == "admin")
+            {
+                @Html.ActionLink("Edit course", "Edit", new {id=item.CourseId }) 
+                <text> &nbsp; </text>
+                @Html.ActionLink("Delete course", "Delete", new { id = item.CourseId })
+            }
         </div>
     }
 
     <br />
 
-    <div id="map_canvas" style="width:750px;height:350px"></div>
+    @if (User.Identity.Name == "admin")
+    {
+        @Html.ActionLink("Add new course", "Create")
+    }
+
+    <div id="map_canvas" style="width:500px;height:350px"></div>
 
     <section class="scripts">
         <script type="text/javascript">

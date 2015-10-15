@@ -164,7 +164,7 @@
     <Compile Include="Controllers\CoursesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InstructorsController.cs" />
-    <Compile Include="Controllers\StudentsController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -208,21 +208,25 @@
     <Compile Include="Migrations\201510141816331_Initial7.Designer.cs">
       <DependentUpon>201510141816331_Initial7.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201510151335173_inital.cs" />
-    <Compile Include="Migrations\201510151335173_inital.Designer.cs">
-      <DependentUpon>201510151335173_inital.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AcademyDbContext.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Instructor.cs" />
-    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\AcademyDbContext.mdf" />
+    <Content Include="App_Data\AcademyDbContext_log.ldf">
+      <DependentUpon>AcademyDbContext.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\aspnet-WebAppFinalProj-20151011112816.mdf" />
+    <Content Include="App_Data\aspnet-WebAppFinalProj-20151011112816_log.ldf">
+      <DependentUpon>aspnet-WebAppFinalProj-20151011112816.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\bg.png" />
@@ -333,10 +337,7 @@
     <Content Include="Views\Users\Edit.cshtml" />
     <Content Include="Views\Users\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Views\Students\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -374,9 +375,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201510141816331_Initial7.resx">
       <DependentUpon>201510141816331_Initial7.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201510151335173_inital.resx">
-      <DependentUpon>201510151335173_inital.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

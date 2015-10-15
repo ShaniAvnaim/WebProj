@@ -27,4 +27,11 @@ namespace WebAppFinalProj.Models
         [Display(Name = "Courses")]
         public List<Course> Courses { get; set; }
     }
+
+    public class CoursesInstructors
+    {
+        public int InstId { get; set; }
+        public string InstFName { get; set; }
+        public string InstLName { get; set; }
+    }
 } 

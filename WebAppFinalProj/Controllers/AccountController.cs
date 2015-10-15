@@ -1,22 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using Owin;
 using WebAppFinalProj.Models;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
+using System.Linq;
 
 namespace WebAppFinalProj.Controllers
 {
     [Authorize]
     public class AccountController : Controller
     {
+        private AcademyDbContext db = new AcademyDbContext();
+
         private ApplicationUserManager _userManager;
 
         public AccountController()
@@ -359,6 +360,18 @@ namespace WebAppFinalProj.Controllers
         [Authorize(Users="admin")]
         public ActionResult Admin()
         {
+
+            List<NumOfStudents> nos = new List<NumOfStudents>();
+            List<CoursesInstructors> ci = new List<CoursesInstructors>();
+            List<CoursesList> cl = new List<CoursesList>();
+
+            nos = (from c in db.Courses
+                   join s in db.Student on c.CourseId equals s.CourseId
+                   group s by new { s.CourseId, s.StudentId }
+                       into grp
+                       select new NumOfStudents { CourId = grp.Key.CourseId, StuId = grp.Key.StudentId }).ToList();
+            ViewBag.NumOfStudent = nos;
+
             return View();
         }
 

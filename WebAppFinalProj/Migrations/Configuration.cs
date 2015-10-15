@@ -87,9 +87,9 @@ namespace WebAppFinalProj.Migrations
             context.Instructors.Add(Instructor2);
             context.Instructors.Add(Instructor3);
 
-            context.Users.Add(User1);
-            context.Users.Add(User2);
-            context.Users.Add(User3);
+            context.Student.Add(User1);
+            context.Student.Add(User2);
+            context.Student.Add(User3);
 
             context.Courses.Add(Course1);
             context.Courses.Add(Course2);

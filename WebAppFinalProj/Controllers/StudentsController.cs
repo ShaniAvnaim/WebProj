@@ -15,9 +15,24 @@ namespace WebAppFinalProj.Controllers
         private AcademyDbContext db = new AcademyDbContext();
 
         // GET: Students
-        public ActionResult Index()
+        public ActionResult Index(string FirstName, string LastName, string Email)
         {
-            return View(db.Student.ToList());
+            var students = from i in db.Student select i;
+
+            if (!String.IsNullOrEmpty(FirstName))
+            {
+                students = students.Where(c => c.FirstName.Contains(FirstName));
+            }
+            if (!String.IsNullOrEmpty(LastName))
+            {
+                students = students.Where(c => c.LastName.Contains(LastName));
+            }
+            if (!String.IsNullOrEmpty(Email))
+            {
+                students = students.Where(c => c.EmailAddress.Contains(Email));
+            }
+
+            return View(students);
         }
 
         // GET: Students/Details/5
@@ -46,7 +61,7 @@ namespace WebAppFinalProj.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "StudentId,FirstName,LastName,EmailAddress,PhoneNum,CourseId")] Student student)
+        public ActionResult Create([Bind(Include = "StudentId,FirstName,LastName,EmailAddress,PhoneNum")] Student student)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +93,7 @@ namespace WebAppFinalProj.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "StudentId,FirstName,LastName,EmailAddress,PhoneNum,CourseId")] Student student)
+        public ActionResult Edit([Bind(Include = "StudentId,FirstName,LastName,EmailAddress,PhoneNum")] Student student)
         {
             if (ModelState.IsValid)
             {

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<WebAppFinalProj.Models.User>
+﻿@model IEnumerable<WebAppFinalProj.Models.Student>
 
 @{
     ViewBag.Title = "Index";
@@ -23,12 +23,6 @@
         <th>
             @Html.DisplayNameFor(model => model.PhoneNum)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Password)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Role)
-        </th>
         <th></th>
     </tr>
 
@@ -47,15 +41,9 @@
             @Html.DisplayFor(modelItem => item.PhoneNum)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Password)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Role)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.UserId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.UserId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.UserId })
+            @Html.ActionLink("Edit", "Edit", new { id = item.StudentId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.StudentId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.StudentId })
         </td>
     </tr>
 }

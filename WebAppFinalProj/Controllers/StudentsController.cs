@@ -17,7 +17,7 @@ namespace WebAppFinalProj.Controllers
         // GET: Students
         public ActionResult Index()
         {
-            return View(db.Users.ToList());
+            return View(db.Student.ToList());
         }
 
         // GET: Students/Details/5
@@ -27,7 +27,7 @@ namespace WebAppFinalProj.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Student student = db.Users.Find(id);
+            Student student = db.Student.Find(id);
             if (student == null)
             {
                 return HttpNotFound();
@@ -50,7 +50,7 @@ namespace WebAppFinalProj.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Users.Add(student);
+                db.Student.Add(student);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -65,7 +65,7 @@ namespace WebAppFinalProj.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Student student = db.Users.Find(id);
+            Student student = db.Student.Find(id);
             if (student == null)
             {
                 return HttpNotFound();
@@ -96,7 +96,7 @@ namespace WebAppFinalProj.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Student student = db.Users.Find(id);
+            Student student = db.Student.Find(id);
             if (student == null)
             {
                 return HttpNotFound();
@@ -109,8 +109,8 @@ namespace WebAppFinalProj.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Student student = db.Users.Find(id);
-            db.Users.Remove(student);
+            Student student = db.Student.Find(id);
+            db.Student.Remove(student);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

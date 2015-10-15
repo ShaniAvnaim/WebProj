@@ -35,6 +35,6 @@ namespace WebAppFinalProj.Models
 
         // FK - many to many relationship
         [Display(Name = "Attending Students")]
-        public virtual ICollection<User> Users { get; set; }
+        public virtual ICollection<Student> Students { get; set; }
     }
 }

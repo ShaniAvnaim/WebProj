@@ -7,10 +7,10 @@ using System.Web;
 
 namespace WebAppFinalProj.Models
 {
-    public class User
+    public class Student
     {
         [Key]
-        public int UserId { get; set; }
+        public int StudentId { get; set; }
 
         [Required, Display(Name = "First Name")]
         public string FirstName { get; set; }
@@ -23,14 +23,5 @@ namespace WebAppFinalProj.Models
 
         [Display(Name = "Phone Number")]
         public string PhoneNum { get; set; }
-
-        [Required, Display(Name = "Password")]
-        public string Password { get; set; }
-
-        [Required, Display(Name = "Role")]
-        public string Role { get; set; }
-
-        [Display(Name = "Courses")]
-        public virtual List<Course> Courses { get; set; }
     }
 }

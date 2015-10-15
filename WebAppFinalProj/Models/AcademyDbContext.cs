@@ -10,6 +10,6 @@ namespace WebAppFinalProj.Models
     {
         public DbSet<Course> Courses { get; set; }
         public DbSet<Instructor> Instructors { get; set; }
-        public DbSet<User> Users { get; set; }
+        public DbSet<Student> Users { get; set; }
     }
 }

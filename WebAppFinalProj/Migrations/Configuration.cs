@@ -21,11 +21,10 @@ namespace WebAppFinalProj.Migrations
             var Instructor2 = new Instructor { InstructorId = 2, FirstName = "Daria", LastName = "Robby", EmailAddress = "DariaR@MakeItUp.com", PhoneNum = "054-9287739", Courses = new List<Course>() };
             var Instructor3 = new Instructor { InstructorId = 3, FirstName = "Josh", LastName = "Gilbert", EmailAddress = "JoshG@MakeItUp.com", PhoneNum = "050-4592344", Courses = new List<Course>() };
 
-            var User1 = new User { UserId = 1, FirstName = "Debi", LastName = "Lolicia", EmailAddress = "Debi88@gmail.com", PhoneNum = "054-7399128", Password = "123456", Role = "User", Courses = new List<Course>() };
-            var User2 = new User { UserId = 2, FirstName = "Dotty", LastName = "Scottie", EmailAddress = "Dotty4ever@gmail.com", PhoneNum = "050-9735724", Password = "123456", Role = "User", Courses = new List<Course>() };
-            var User3 = new User { UserId = 3, FirstName = "Mort", LastName = "Raelenc", EmailAddress = "Angel69Kitty@gmail.com", PhoneNum = "077-8364152", Password = "123456", Role = "User", Courses = new List<Course>() };
-            var Admin = new User { UserId = 4, FirstName = "Admin", LastName = "Admin", EmailAddress = "Admin@MakeItUp.com", PhoneNum = "1800-906090", Password = "123456", Role = "Admin", Courses = new List<Course>() };
-
+            var User1 = new Student { StudentId = 1, FirstName = "Debi", LastName = "Lolicia", EmailAddress = "Debi88@gmail.com", PhoneNum = "054-7399128" };
+            var User2 = new Student { StudentId = 2, FirstName = "Dotty", LastName = "Scottie", EmailAddress = "Dotty4ever@gmail.com", PhoneNum = "050-9735724" };
+            var User3 = new Student { StudentId = 3, FirstName = "Mort", LastName = "Raelenc", EmailAddress = "Angel69Kitty@gmail.com", PhoneNum = "077-8364152" };
+           
             var Course1 = new Course
             {
                 CourseId = 1,
@@ -37,7 +36,7 @@ namespace WebAppFinalProj.Migrations
                 StartDate = new DateTime(2015, 2, 12, 17, 0, 0),
                 EndDate = new DateTime(2015, 2, 26, 17, 0, 0),
                 InstructorId = 1,
-                Users = new List<User>()
+                Students = new List<Student>()
             };
             var Course2 = new Course
             {
@@ -50,7 +49,7 @@ namespace WebAppFinalProj.Migrations
                 StartDate = new DateTime(2015, 3, 7, 17, 0, 0),
                 EndDate = new DateTime(2015, 4, 1, 17, 0, 0),
                 InstructorId = 2,
-                Users = new List<User>()
+                Students = new List<Student>()
             };
             var Course3 = new Course
             {
@@ -63,7 +62,7 @@ namespace WebAppFinalProj.Migrations
                 StartDate = new DateTime(2015, 2, 5, 17, 0, 0),
                 EndDate = new DateTime(2015, 2, 9, 17, 0, 0),
                 InstructorId = 3,
-                Users = new List<User>()
+                Students = new List<Student>()
             };
             var Course4 = new Course
             {
@@ -76,18 +75,13 @@ namespace WebAppFinalProj.Migrations
                 StartDate = new DateTime(2015, 2, 10, 17, 0, 0),
                 EndDate = new DateTime(2015, 2, 17, 17, 0, 0),
                 InstructorId = 3,
-                Users = new List<User>()
+                Students = new List<Student>()
             };
 
             Instructor1.Courses.Add(Course1);
             Instructor2.Courses.Add(Course2);
             Instructor3.Courses.Add(Course3);
             Instructor3.Courses.Add(Course4);
-
-            User1.Courses.Add(Course1);
-            User2.Courses.Add(Course2);
-            User3.Courses.Add(Course2);
-            User3.Courses.Add(Course3);
 
             context.Instructors.Add(Instructor1);
             context.Instructors.Add(Instructor2);
@@ -96,7 +90,6 @@ namespace WebAppFinalProj.Migrations
             context.Users.Add(User1);
             context.Users.Add(User2);
             context.Users.Add(User3);
-            context.Users.Add(Admin);
 
             context.Courses.Add(Course1);
             context.Courses.Add(Course2);

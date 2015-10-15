@@ -17,6 +17,16 @@
     </div>
 </div>
 
+<div>
+    @foreach (var item in (List<WebAppFinalProj.Models.NumOfStudents>)ViewBag.NumOfStudents)
+    {
+        <div data-catid="@item.CourId">
+            @Html.DisplayFor(nos => item.CourId)
+            <span class="count">(@Html.DisplayFor(nos => item.))</span>
+        </div>
+    }
+</div>
+
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }

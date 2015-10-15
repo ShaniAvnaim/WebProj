@@ -365,9 +365,9 @@ namespace WebAppFinalProj.Controllers
             List<CoursesInstructors> ci = new List<CoursesInstructors>();
             List<CoursesList> cl = new List<CoursesList>();
 
-            nos = (from c in db.Courses
-                   join s in db.Student on c.CourseId equals s.CourseId
-                   group s by new { s.CourseId, s.StudentId }
+            nos = (from s in db.Student
+                   join c in db.Courses on s.CourseId equals c.CourseId
+                   group c by new { c.CourseId, s.StudentId }
                        into grp
                        select new NumOfStudents { CourId = grp.Key.CourseId, StuId = grp.Key.StudentId }).ToList();
             ViewBag.NumOfStudent = nos;

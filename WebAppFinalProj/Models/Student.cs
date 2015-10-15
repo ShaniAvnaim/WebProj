@@ -32,5 +32,6 @@ namespace WebAppFinalProj.Models
     {
         public int StuId { get; set; }
         public int CourId { get; set; }
+
     }
 }

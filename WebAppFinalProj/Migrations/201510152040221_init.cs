@@ -3,7 +3,7 @@ namespace WebAppFinalProj.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class ini : DbMigration
+    public partial class init : DbMigration
     {
         public override void Up()
         {
@@ -20,13 +20,14 @@ namespace WebAppFinalProj.Migrations
                         LastName = c.String(nullable: false),
                         EmailAddress = c.String(nullable: false),
                         PhoneNum = c.String(),
-                        CourseId = c.String(),
-                        Course_CourseId = c.Int(),
+                        CourseId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.StudentId)
-                .ForeignKey("dbo.Courses", t => t.Course_CourseId)
-                .Index(t => t.Course_CourseId);
+                .ForeignKey("dbo.Courses", t => t.CourseId, cascadeDelete: true)
+                .Index(t => t.CourseId);
             
+            AddColumn("dbo.Courses", "X", c => c.Double(nullable: false));
+            AddColumn("dbo.Courses", "Y", c => c.Double(nullable: false));
             DropTable("dbo.Users");
             DropTable("dbo.UserCourses");
         }
@@ -56,8 +57,10 @@ namespace WebAppFinalProj.Migrations
                     })
                 .PrimaryKey(t => t.UserId);
             
-            DropForeignKey("dbo.Students", "Course_CourseId", "dbo.Courses");
-            DropIndex("dbo.Students", new[] { "Course_CourseId" });
+            DropForeignKey("dbo.Students", "CourseId", "dbo.Courses");
+            DropIndex("dbo.Students", new[] { "CourseId" });
+            DropColumn("dbo.Courses", "Y");
+            DropColumn("dbo.Courses", "X");
             DropTable("dbo.Students");
             CreateIndex("dbo.UserCourses", "Course_CourseId");
             CreateIndex("dbo.UserCourses", "User_UserId");

@@ -43,5 +43,6 @@ namespace WebAppFinalProj.Models
         public int CourId { get; set; }
         public string CourName { get; set; }
         public int InstID { get; set; }
+        public int Count { get; set; }
     }
 }

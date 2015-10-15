@@ -21,10 +21,6 @@ namespace WebAppFinalProj.Migrations
             var Instructor2 = new Instructor { InstructorId = 2, FirstName = "Daria", LastName = "Robby", EmailAddress = "DariaR@MakeItUp.com", PhoneNum = "054-9287739", Courses = new List<Course>() };
             var Instructor3 = new Instructor { InstructorId = 3, FirstName = "Josh", LastName = "Gilbert", EmailAddress = "JoshG@MakeItUp.com", PhoneNum = "050-4592344", Courses = new List<Course>() };
 
-            var User1 = new Student { StudentId = 1, FirstName = "Debi", LastName = "Lolicia", EmailAddress = "Debi88@gmail.com", PhoneNum = "054-7399128" };
-            var User2 = new Student { StudentId = 2, FirstName = "Dotty", LastName = "Scottie", EmailAddress = "Dotty4ever@gmail.com", PhoneNum = "050-9735724" };
-            var User3 = new Student { StudentId = 3, FirstName = "Mort", LastName = "Raelenc", EmailAddress = "Angel69Kitty@gmail.com", PhoneNum = "077-8364152" };
-           
             var Course1 = new Course
             {
                 CourseId = 1,
@@ -77,24 +73,28 @@ namespace WebAppFinalProj.Migrations
                 InstructorId = 3,
                 Students = new List<Student>()
             };
+           
+            var User1 = new Student { StudentId = 1, FirstName = "Debi", LastName = "Lolicia", EmailAddress = "Debi88@gmail.com", PhoneNum = "054-7399128", CourseId = 2 };
+            var User2 = new Student { StudentId = 2, FirstName = "Dotty", LastName = "Scottie", EmailAddress = "Dotty4ever@gmail.com", PhoneNum = "050-9735724", CourseId = 2 };
+            var User3 = new Student { StudentId = 3, FirstName = "Mort", LastName = "Raelenc", EmailAddress = "Angel69Kitty@gmail.com", PhoneNum = "077-8364152", CourseId = 1 };
+
+            context.Courses.Add(Course1);
+            context.Courses.Add(Course2);
+            context.Courses.Add(Course3);
+            context.Courses.Add(Course4);
+
+            context.Instructors.Add(Instructor1);
+            context.Instructors.Add(Instructor2);
+            context.Instructors.Add(Instructor3);
 
             Instructor1.Courses.Add(Course1);
             Instructor2.Courses.Add(Course2);
             Instructor3.Courses.Add(Course3);
             Instructor3.Courses.Add(Course4);
 
-            context.Instructors.Add(Instructor1);
-            context.Instructors.Add(Instructor2);
-            context.Instructors.Add(Instructor3);
-
             context.Student.Add(User1);
             context.Student.Add(User2);
             context.Student.Add(User3);
-
-            context.Courses.Add(Course1);
-            context.Courses.Add(Course2);
-            context.Courses.Add(Course3);
-            context.Courses.Add(Course4);
         }
     }
 }

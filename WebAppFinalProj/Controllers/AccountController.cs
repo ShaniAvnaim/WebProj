@@ -365,12 +365,12 @@ namespace WebAppFinalProj.Controllers
             List<CoursesInstructors> ci = new List<CoursesInstructors>();
             List<CoursesList> cl = new List<CoursesList>();
 
-            nos = (from s in db.Student
-                   join c in db.Courses on s.CourseId equals c.CourseId
-                   group c by new { c.CourseId, s.StudentId }
+            cl = (from c in db.Courses
+                   join s in db.Student on c.CourseId equals s.CourseId
+                   group c by c.Name
                        into grp
-                       select new NumOfStudents { CourId = grp.Key.CourseId, StuId = grp.Key.StudentId }).ToList();
-            ViewBag.NumOfStudent = nos;
+                       select new CoursesList { CourName = grp.Key, Count = grp.Count() }).ToList();
+            ViewBag.StudentsInCourses = cl;
 
             return View();
         }

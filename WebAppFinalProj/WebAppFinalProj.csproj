@@ -172,45 +172,17 @@
     <Compile Include="Migrations\201510112305117_InitialCreate.Designer.cs">
       <DependentUpon>201510112305117_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201510121614586_Initial.cs" />
-    <Compile Include="Migrations\201510121614586_Initial.Designer.cs">
-      <DependentUpon>201510121614586_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201510152040221_init.cs" />
+    <Compile Include="Migrations\201510152040221_init.Designer.cs">
+      <DependentUpon>201510152040221_init.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201510121621562_Initial1.cs" />
-    <Compile Include="Migrations\201510121621562_Initial1.Designer.cs">
-      <DependentUpon>201510121621562_Initial1.cs</DependentUpon>
+    <Compile Include="Migrations\201510152059251_init1.cs" />
+    <Compile Include="Migrations\201510152059251_init1.Designer.cs">
+      <DependentUpon>201510152059251_init1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201510121627584_Initial2.cs" />
-    <Compile Include="Migrations\201510121627584_Initial2.Designer.cs">
-      <DependentUpon>201510121627584_Initial2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201510121834375_Initial3.cs" />
-    <Compile Include="Migrations\201510121834375_Initial3.Designer.cs">
-      <DependentUpon>201510121834375_Initial3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201510132018108_Initial4.cs" />
-    <Compile Include="Migrations\201510132018108_Initial4.Designer.cs">
-      <DependentUpon>201510132018108_Initial4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201510132057465_Initial5.cs" />
-    <Compile Include="Migrations\201510132057465_Initial5.Designer.cs">
-      <DependentUpon>201510132057465_Initial5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201510140716464_Initial6.cs" />
-    <Compile Include="Migrations\201510140716464_Initial6.Designer.cs">
-      <DependentUpon>201510140716464_Initial6.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201510141621204_initialize.cs" />
-    <Compile Include="Migrations\201510141621204_initialize.Designer.cs">
-      <DependentUpon>201510141621204_initialize.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201510141816331_Initial7.cs" />
-    <Compile Include="Migrations\201510141816331_Initial7.Designer.cs">
-      <DependentUpon>201510141816331_Initial7.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201510151902442_ini.cs" />
-    <Compile Include="Migrations\201510151902442_ini.Designer.cs">
-      <DependentUpon>201510151902442_ini.cs</DependentUpon>
+    <Compile Include="Migrations\201510152100236_init2.cs" />
+    <Compile Include="Migrations\201510152100236_init2.Designer.cs">
+      <DependentUpon>201510152100236_init2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AcademyDbContext.cs" />
@@ -350,35 +322,14 @@
     <EmbeddedResource Include="Migrations\201510112305117_InitialCreate.resx">
       <DependentUpon>201510112305117_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201510121614586_Initial.resx">
-      <DependentUpon>201510121614586_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201510152040221_init.resx">
+      <DependentUpon>201510152040221_init.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201510121621562_Initial1.resx">
-      <DependentUpon>201510121621562_Initial1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201510152059251_init1.resx">
+      <DependentUpon>201510152059251_init1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201510121627584_Initial2.resx">
-      <DependentUpon>201510121627584_Initial2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201510121834375_Initial3.resx">
-      <DependentUpon>201510121834375_Initial3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201510132018108_Initial4.resx">
-      <DependentUpon>201510132018108_Initial4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201510132057465_Initial5.resx">
-      <DependentUpon>201510132057465_Initial5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201510140716464_Initial6.resx">
-      <DependentUpon>201510140716464_Initial6.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201510141621204_initialize.resx">
-      <DependentUpon>201510141621204_initialize.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201510141816331_Initial7.resx">
-      <DependentUpon>201510141816331_Initial7.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201510151902442_ini.resx">
-      <DependentUpon>201510151902442_ini.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201510152100236_init2.resx">
+      <DependentUpon>201510152100236_init2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

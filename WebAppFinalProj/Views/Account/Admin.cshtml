@@ -16,15 +16,17 @@
         </ul>
     </div>
 </div>
-
+<br />
 <div>
-    @foreach (var item in (List<WebAppFinalProj.Models.NumOfStudents>)ViewBag.NumOfStudents)
-    {
-        <div data-catid="@item.CourId">
-            @Html.DisplayFor(nos => item.CourId)
-            <span class="count">(@Html.DisplayFor(nos => item.))</span>
-        </div>
-    }
+    <div id="course-students">
+        <h2>Course population</h2>
+        @foreach (var item in (List<WebAppFinalProj.Models.CoursesList>)ViewBag.StudentsInCourses)
+        {
+            <div>
+                <b>Course Name:</b> @Html.DisplayFor(cl => item.CourName) <b>Number of attendants:</b> @Html.DisplayFor(cl => item.Count)
+</div>
+        }
+    </div>
 </div>
 
 @section Scripts {

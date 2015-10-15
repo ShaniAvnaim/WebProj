@@ -219,14 +219,13 @@ footer {
 #content {
 	display: table;
     border-spacing: 20px;
-    width: inherit;
+    width: 1000px;
     background: #dcdfec;
     padding: 20px;
 }
 
 	#main-content {
 		display: table-cell;
-		width: 78%;
 		padding-right: 22px;
         padding-left: 22px;
         background: #bcb1c3;
@@ -259,6 +258,6 @@ footer {
 }
 
 .home-page p{
-    column-width:20em;
+    column-count:2;
     column-gap: 5px;
 }

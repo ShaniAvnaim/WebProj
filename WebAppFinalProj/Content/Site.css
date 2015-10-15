@@ -239,6 +239,7 @@ footer {
 	aside {
 		display: table-cell;
         right: 0;
+        width: 150px;
         padding: 10px;
         background: #bcb1c3;
         border:solid;

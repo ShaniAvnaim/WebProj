@@ -356,6 +356,12 @@ namespace WebAppFinalProj.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        [Authorize(Users="admin")]
+        public ActionResult Admin()
+        {
+            return View();
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing && UserManager != null)

@@ -18,7 +18,6 @@ namespace WebAppFinalProj.Controllers
         public ActionResult Index(string Name, DateTime? StartDate, string Address)
         {
             var courses = from c in db.Courses select c;
-            var instructors = from i in db.Instructors select i;
 
             if (!String.IsNullOrEmpty(Name))
             {

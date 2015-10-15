@@ -16,6 +16,10 @@
             <li>@Html.ActionLink("About Us", "About", "Home")</li>
             <li>@Html.ActionLink("Our Courses", "Index", "Courses")</li>
             <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            @if (User.Identity.Name == "admin")
+            {
+                <li>@Html.ActionLink("Admin", "Admin", "Account")</li>
+            }
         </ul>
         @Html.Partial("_LoginPartial")
     </nav>
